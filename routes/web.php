@@ -79,4 +79,7 @@ Route::prefix('program')->group(function () {
 Route::get('/about-us', function () {
     return "https://www.educastudio.com/about-us";
 });
+Route::resource('contact-us',ContactController::class)->only([
+    'show'
+]);
 
